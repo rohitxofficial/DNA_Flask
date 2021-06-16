@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forensic Science: DNA</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header_text">
+        <span style="color: #ff279c">D</span>
+        <span class="extension">eoxyribo</span>
+        <span style="color: #00a7ff">N</span>
+        <span class="extension">ucleic</span>
+        <span style="color: #ff8900">A</span>
+        <span class="extension">cid</span>
+    </header>
+    <div class="main-body">
+        <p class="text-para">Enter the DNA Sequence and We'll check out our database to get the match for the input DNA Sequence</p>
+        <form class="text-para" action="http://127.0.0.1:5000/dna" method="POST">
+            <span style="color: #ff279c">D</span><span style="color: #00a7ff">N</span><span
+                style="color: #ff8900">A</span> Sequence:
+            <textarea name="seq" id="mytext"></textarea>
+            <div class="wrapper">
+                <button class="">
+                    <span>Submit</span>
+                    <div class="success">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 29.756 29.756"
+                            style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+
+                            <path
+                                d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

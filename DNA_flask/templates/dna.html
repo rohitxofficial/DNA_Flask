@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forensic Science: DNA</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header_text">
+        <span style="color: #ff279c">D</span>
+        <span class="extension">eoxyribo</span>
+        <span style="color: #00a7ff">N</span>
+        <span class="extension">ucleic</span>
+        <span style="color: #ff8900">A</span>
+        <span class="extension">cid</span>
+    </header>
+
+    <div class="main-body">
+        {% if flag==True %}
+        <p class="text-para">Looks like the DNA sample belongs to: {{ name }}</p>
+        {% else %}
+        <p class="text-para">Sorry, We cant find any DNA in our Database matching your DNA Sample.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
